@@ -22,13 +22,10 @@ class GameController:
                 elif event.type == pygame.KEYDOWN:
                     if event.key == pygame.K_LEFT:
                         self.player.move("à gauche")
-                        self.renderer.set_facing_direction(-1)  # Regarde à gauche
-                    elif event.key == pygame.K_RIGHT:
-                        self.player.move("en face")
-                        self.renderer.set_facing_direction(0)  # Regarde à droite
+                        self.renderer.set_facing_direction(False)  # Regarde à gauche
                     elif event.key == pygame.K_RIGHT:
                         self.player.move("à droite")
-                        self.renderer.set_facing_direction(1)  # Regarde à droite
+                        self.renderer.set_facing_direction(True)  # Regarde à droite
 
             self.renderer.update_animation(dt)
             self.screen.fill((0, 0, 0))
