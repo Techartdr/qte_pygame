@@ -19,6 +19,7 @@ class GameController:
         self.running = True
         self.paused = False  # Indique si le jeu est en pause
         self.start_time = time.time()  # Heure de début pour calculer la difficulté
+        self.total_time = 0
         self.next_qte_time = time.time() + random.uniform(2, 4)  # Temps avant le prochain QTE
         self.qte_warning_time = 0.5  # Temps d'avertissement avant le QTE
         self.difficulty_level = 1  # Niveau de difficulté initial
@@ -72,11 +73,12 @@ class GameController:
         if not os.path.exists('assets/scores.csv'):
             with open('assets/scores.csv', 'w', newline='') as file:
                 writer = csv.writer(file)
-                writer.writerow(['Pseudo', 'Score', 'Difficulté'])  # Écrire l'en-tête
+                writer.writerow(['id', 'Pseudo', 'Score', 'Difficulté','temps'])  # Écrire l'en-tête
 
         with open('assets/scores.csv', 'a', newline='') as file:
+            self.total_time = time.time() - self.start_time
             writer = csv.writer(file)
-            writer.writerow([self.player_name, self.score, self.difficulty_level])
+            writer.writerow([int(time.time()), self.player_name, self.score, self.difficulty_level, self.total_time])
 
     def toggle_pause(self):
         """Change l'état de pause du jeu."""

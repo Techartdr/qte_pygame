@@ -71,7 +71,7 @@ class MenuController:
                 scores = list(reader)
 
             for i, score in enumerate(scores):
-                self.draw_text(f"{score[0]} - Score: {score[1]} - Difficulté: {score[2]}", 225, y_offset)
+                self.draw_text(f"{score[1]} - Score: {score[2]} - Difficulté: {score[3]}", 225, y_offset)
                 y_offset += 30
 
         except FileNotFoundError:
