@@ -9,7 +9,7 @@ Le joueur doit réussir des actions rapides (QTE) pour marquer des points, avec 
 
 ![Image du jeu](assets/images/game.png)
 
-Vidéo de Gameplay : https://youtube.com/shorts/vX9Amti7ccY
+Vidéo de Gameplay : https://youtube.com/shorts/vX9Amti7ccY  
 Vidéo de visualisation des données : https://youtu.be/N4BVslGMSX4
 
 ## Structure des fichiers
