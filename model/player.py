@@ -4,4 +4,4 @@ class Player:
         self.health = health
 
     def move(self, direction):
-        print(f"{self.name} se déplace {direction}.")
+        print(f"{self.name} se déplace vers {direction}.")

@@ -12,6 +12,6 @@ class Spritesheet:
     def get_sprites(self, start_x, start_y, width, height, num_sprites, spacing=0):
         sprites = []
         for i in range(num_sprites):
-            sprite = self.get_sprite(start_y + i * (width + spacing), start_x, width, height)
+            sprite = self.get_sprite(start_x + i * (width + spacing), start_y, width, height)
             sprites.append(sprite)
         return sprites
