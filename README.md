@@ -158,7 +158,7 @@ Script d'analyse pour lire les scores sauvegardés dans `assets/scores.csv` et g
 
 1. Exécutez `user_behavior.py` pour afficher les scores et les temps de jeu des joueurs sous forme de graphiques.
    ```bash
-   python user_behavior.py
+   python .\analysis\user_behavior.py
    ```
 2. Entrez des commandes comme :
    - `score 1` pour afficher les scores sous forme de graphique à barres.
